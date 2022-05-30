@@ -1,0 +1,27 @@
+{
+  "name": "mypromise",
+  "version": "1.0.0",
+  "description": "promise implementation",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lewin671/Promise.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "qingyingliu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lewin671/Promise/issues"
+  },
+  "homepage": "https://github.com/Lewin671/Promise#readme",
+  "dependencies": {
+    "jest-cli": "^28.1.0",
+    "jtest": "^0.0.1"
+  }
+}
