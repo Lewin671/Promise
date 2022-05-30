@@ -49,7 +49,7 @@ module.exports = class Promise {
     then(onFulfilled, onRejected) {
         return new Promise((resolve, reject) => {
             const fulFilledCallback = () => {
-                if (this.state === FULFILLED) {
+                if (this.state === FULFILLED && onFulfilled) {
                     try {
                         const value = onFulfilled(this.value);
                         resolve(value);
@@ -60,7 +60,7 @@ module.exports = class Promise {
             };
 
             const rejectedCallback = () => {
-                if (this.state === REJECTED) {
+                if (this.state === REJECTED && onRejected) {
                     try {
                         const value = onRejected(this.reason);
                         resolve(value);
